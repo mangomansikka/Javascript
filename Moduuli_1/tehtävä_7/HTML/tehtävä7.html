@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice roll</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+  'use strict'
+  function sum(dices) {
+    let base_sum = 0;
+    let dice = 0;
+      do {
+          dice += 1;
+          let result = Math.floor(Math.random() * 6) + 1;
+          console.log(result)
+          base_sum += result;
+      } while (dice < dices);
+    return base_sum;
+  }
+
+  let final_sum = 0
+  const dices = parseInt(prompt('How many dices there are? '));
+  const rolls = parseInt(prompt('How many times we roll the dices? '));
+
+  for (let i = 0; i < rolls; i++)
+    final_sum += sum(dices);
+
+  document.getElementById('result').innerHTML = 'The sum of dices is ' + final_sum;
+</script>
+</body>
+</html>

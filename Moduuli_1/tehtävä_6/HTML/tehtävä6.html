@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square root</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+  'use strict'
+  let sqr = confirm("Should I calculate square root?")
+  if (sqr === true) {
+    var value = parseFloat((prompt('Give me a number: ')));
+      if (value === NaN) {
+        document.getElementById("result").innerHTML = 'The square root of a negative number is not defined.';
+      }
+      else
+        var answer = Math.sqrt(value);
+        document.getElementById("result").innerHTML = 'Number ' + value + ' square root is ' + answer + '.'}
+  else
+    document.getElementById("result").innerHTML = 'The square root is not calculated.';
+</script>
+
+</body>
+</html>

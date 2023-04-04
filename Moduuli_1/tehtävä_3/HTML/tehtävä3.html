@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three integers</title>
+</head>
+    <p id="1content"></p>
+    <p id="2content"></p>
+    <p id="3content"></p>
+<body>
+    <script>
+        'use strict';
+        const int1 = parseInt(prompt('Give the first integer: '))
+        const int2 = parseInt(prompt('Give the second integer: '))
+        const int3 = parseInt(prompt('Give the third integer: '))
+
+        const average = (int1 + int2 + int3)/3
+        const sum = int1 + int2 + int3
+        const product = int1 * int2 * int3
+
+        const int_sum = document.getElementById("1content")
+        const int_pro = document.getElementById("2content")
+        const int_ave = document.getElementById("3content")
+
+        int_sum.innerHTML = sum
+        int_pro.innerHTML = product
+        int_ave.innerHTML = average
+
+        console.log('The sum is ' + int_sum)
+        console.log('The product is ' + int_pro)
+        console.log('The average is ' + int_ave)
+    </script>
+</body>
+</html>

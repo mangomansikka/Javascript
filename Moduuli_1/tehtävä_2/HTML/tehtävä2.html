@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Testing JavaScript</title>
-    <script src="javascript/tehtävä2.js" defer></script>
+    <title>Greeting</title>
 </head>
 <body>
+<h1>Greeting</h1>
+<p id="target"></p>
+<script>
+    'use strict';
+    const name = prompt('Type your name.');
+    document.querySelector('#target').innerHTML = 'Hello, ' + name + '!';
+</script>
 </body>
 </html>
